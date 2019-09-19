@@ -11,6 +11,8 @@ class InsightsArchiveSpecs(Specs):
 
     all_installed_rpms = glob_file("insights_commands/rpm_-qa*")
     auditctl_status = simple_file("insights_commands/auditctl_-s")
+    aws_instance_id_doc = simple_file("insights_commands/python_-m_insights.tools.cat_--no-header_aws_instance_id_doc")
+    aws_instance_id_pkcs7 = simple_file("insights_commands/python_-m_insights.tools.cat_--no-header_aws_instance_id_pkcs7")
     aws_instance_type = simple_file("insights_commands/python_-m_insights.tools.cat_--no-header_aws_instance_type")
     azure_instance_type = simple_file("insights_commands/python_-m_insights.tools.cat_--no-header_azure_instance_type")
     bios_uuid = simple_file("insights_commands/dmidecode_-s_system-uuid")
@@ -45,6 +47,8 @@ class InsightsArchiveSpecs(Specs):
     dmesg = simple_file("insights_commands/dmesg")
     dmidecode = simple_file("insights_commands/dmidecode")
     dmsetup_info = simple_file("insights_commands/dmsetup_info_-C")
+    dnf_module_list = simple_file("insights_commands/dnf_-C_--noplugins_module_list")
+    dnf_module_info = glob_file("insights_commands/dnf_-C_--noplugins_module_info_*")
     docker_info = simple_file("insights_commands/docker_info")
     docker_list_containers = simple_file("insights_commands/docker_ps_--all_--no-trunc")
     docker_list_images = simple_file("insights_commands/docker_images_--all_--no-trunc_--digests")
